@@ -44,6 +44,7 @@ func generateRedisClusterParams(ctx context.Context, cr *redisv1beta2.RedisClust
 		ClusterMode:                   true,
 		ClusterVersion:                cr.Spec.ClusterVersion,
 		NodeSelector:                  params.NodeSelector,
+		TopologySpreadConstraints:     params.TopologySpreadConstraints,
 		PodSecurityContext:            cr.Spec.PodSecurityContext,
 		PriorityClassName:             cr.Spec.PriorityClassName,
 		Affinity:                      params.Affinity,
